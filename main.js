@@ -22,7 +22,7 @@
 
 const app = new Vue({
     el: '#app',
-    data:{
+    data:{ 
         tipo: undefined,
         tipoUsuario: ['Administrador','Secretario','Vendedor','Ensamblador'], 
         
