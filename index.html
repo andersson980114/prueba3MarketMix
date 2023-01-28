@@ -27,29 +27,35 @@
                 </div>     
                 <div>
                     <label class="form_label">Pin:</label>
-                    <input class="pin" type="text" placeholder="****">
+                    <input class="pin" v-model="pin" type="text" placeholder="****">
                     
                 </div>    
-                
-                <div  v-if="tipo == undefined">
+
+                <div >
+                    <a @click="validar"  :href="enlace">Ingresar</a> 
+                </div>
+                <!--
+                <div @click="validar" v-if="tipo == undefined">
                     <a   href="#">Ingresar</a> 
                 </div>
 
-                <div  v-if="tipo == 'Administrador'"> 
+                <div  @click="validar"  v-if="tipo == 'Administrador'"> 
                     <a  href="html/admin.html">Ingresar</a>
                 </div>
 
-                <div  v-if="tipo == 'Secretario'"> 
+                <div  @click="validar"  v-if="tipo == 'Secretario'"> 
                     <a    href="html/secretario.html">Ingresar</a> 
                 </div>
 
-                <div  v-if="tipo == 'Vendedor'"> 
+                <div  @click="validar" v-if="tipo == 'Vendedor'"> 
                     <a    href="html/vendedor.html">Ingresar</a> 
                 </div>
 
-                <div  v-if="tipo == 'Ensamblador'"> 
+                <div  @click="validar"  v-if="tipo == 'Ensamblador'"> 
                     <a  href="html/ensamblador.html">Ingresar</a>
                 </div>
+                -->
+                
 
             </div>
 
