@@ -1,30 +1,32 @@
 Vue.component('vue-select',{
     props: ['list'],
 
-    data:function(){
+    data(){
         return{
-            value:undefined
+            value: undefined
         }
-    }
-    ,
-    watch:{
-
+    },
+    watch: {
+        value(newValue){
+            alert(newValue)
+        }
     },
 
     template: //html 
-    `
-    <div>
+    ` 
         <Select v-model="value">
             <option classs="option" v-for="item of list">{{item}}</option> 
-        </Select>
-    </div>
+        </Select> 
     `
 })
+
+
 
 const app = new Vue({
     el: '#app',
     data:{
-        tipoUsuario: ['Administrador','Secretario','Vendedor','Ensamblador']
+        tipo: undefined,
+        tipoUsuario: ['Administrador','Secretario','Vendedor','Ensamblador'], 
         
     },
     methods:{ 
