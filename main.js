@@ -1,24 +1,22 @@
-Vue.component('vue-select',{
+ Vue.component('vue-select', {
     props: ['list'],
-
-    data(){
-        return{
+    data: function () {
+        return {
             value: undefined
         }
     },
     watch: {
         value(newValue){
-            alert(newValue)
+            this.$emit('input', newValue)
         }
     },
-
-    template: //html 
-    ` 
-        <Select v-model="value">
-            <option classs="option" v-for="item of list">{{item}}</option> 
-        </Select> 
+    template: //html
     `
+        <select v-model="value">
+            <option classs="option" v-for="item of list">{{item}}</option>
+        </select>`
 })
+
 
 
 
@@ -28,12 +26,5 @@ const app = new Vue({
         tipo: undefined,
         tipoUsuario: ['Administrador','Secretario','Vendedor','Ensamblador'], 
         
-    },
-    methods:{ 
-        
-        
-    },
- 
-     
-    
+    }, 
 })
