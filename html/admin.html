@@ -4,68 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css" >
-    <title>Ingreso</title>
+    <link rel="stylesheet" type="text/css" href="../index.css" >
+    <title>Admin</title>
 </head>
 <body>
     <div id="app" class="container ">
-        
-        <div class="form">
-            <div class="image_content">
-                <img src="https://1000marcas.net/wp-content/uploads/2019/11/Adidas-logo.png" alt="">
-            </div>
-
-            <div class="form_container">
-                <div class="form_tittle">
-                    <h2>Liquidación</h2>
-                </div>
-                <div  >
-                    <label class="form_label">Cargo:</label>
-                    <vue-select class="select" v-model="tipo" :list="tipoUsuario"  > 
-                    <h1>{{tipo}}</h1>
-                      
-                </div>     
-                <div>
-                    <label class="form_label">Pin:</label>
-                    <input class="pin" v-model="pin" type="text" placeholder="****">
-                    
-                </div>    
-
-                <div >
-                    <a @click="validar"  :href="enlace">Ingresar</a> 
-                </div>
-                <!--
-                <div @click="validar" v-if="tipo == undefined">
-                    <a   href="#">Ingresar</a> 
-                </div>
-
-                <div  @click="validar"  v-if="tipo == 'Administrador'"> 
-                    <a  href="html/admin.html">Ingresar</a>
-                </div>
-
-                <div  @click="validar"  v-if="tipo == 'Secretario'"> 
-                    <a    href="html/secretario.html">Ingresar</a> 
-                </div>
-
-                <div  @click="validar" v-if="tipo == 'Vendedor'"> 
-                    <a    href="html/vendedor.html">Ingresar</a> 
-                </div>
-
-                <div  @click="validar"  v-if="tipo == 'Ensamblador'"> 
-                    <a  href="html/ensamblador.html">Ingresar</a>
-                </div>
-                -->
-                
-
-            </div>
-
-        </div> 
- 
-               
-
-            
-
-           <!--
+          
            <div class="admin_container">
                <div class="formi">
                    <div class="form_container">
@@ -159,48 +103,12 @@
                     </div>
     
                 </div>
-                -->
-
-                <!--
-
-                <div class="form"> 
-        
-                    <div class="form_container">
-                        <div class="form_tittle">
-                            <h2>Liquidación</h2>
-                        </div>   
-                        <br>
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div> 
-                        <div>
-                            <label class="form_label">Horas Extras:</label>
-                            <input class="pin" type="text" placeholder="0">
-                            
-                        </div> 
-                        <div>
-                            <label class="form_label">Total a Pagar:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>    
-                        
-                        <div>
-                            <a   href="#">Ingresar</a>
-                        </div>
-   
-                   </div>
-   
-               </div>
-
-            </div>
-            -->
+                
              
          
 
     </div>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
 </html>
