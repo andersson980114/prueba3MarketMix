@@ -28,6 +28,8 @@ body{
 
 
 }
+
+
 .image_content{
     text-align: center;
 }
@@ -70,5 +72,24 @@ a{
 }
 
 
+.admin_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+    
+}
+
+.formi{  
+    margin-top: 10%;
+    margin-left: 20%;
+    background-color: #ECECEC; 
+    width: 90%;
+    max-width: 400px; 
+    padding: 4.5em 3em;
+    border-radius: 25px; 
+    box-shadow: 6px 6px 4px -3px rgb(0 0 0 /80%);
+
+
+}
  
 
