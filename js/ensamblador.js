@@ -47,7 +47,7 @@ const app = new Vue({
             }
 
             this.totalPago= this.EBase + this.pHExtras + this.pagoZapatos + this.pagoZapatillas + this.pagoHijos +  parseInt(this.auxTra)
-            console.log(this.totalPago)
+             
           }
     },
 
