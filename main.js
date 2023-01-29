@@ -22,7 +22,7 @@ Vue.component('vue-select', {
 
 const app = new Vue({
     el: '#app',
-    data:{
+    data:{ 
         tipo: undefined,
         pin: '',
         tipoUsuario: ['Administrador','Secretario','Vendedor','Ensamblador'], 
@@ -41,7 +41,7 @@ const app = new Vue({
             },
             {
                 tipo: 'Ensamblador',
-                pin: 0123
+                pin: 1235
             },
             
         ],  

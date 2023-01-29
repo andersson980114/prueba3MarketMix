@@ -14,29 +14,34 @@
                <div class="formi">
                    <div class="form_container">
                        <div class="form_tittle">
-                           <h2>Liquidación</h2>
+                           <h4>Liquidación Ensamblador</h4>
                        </div>
                         
                        <div>
                            <label class="form_label">Salario Base:</label>
-                           <input class="pin" type="text" placeholder="$0.0">
+                           <input class="pin" type="text" placeholder="$0.0" v-model="EBase">
                            
                        </div>    
                        <div>
-                           <label class="form_label">Salario Base:</label>
-                           <input class="pin" type="text" placeholder="$0.0">
+                           <label class="form_label">Max. Zapatos:</label>
+                           <input class="pin" type="text" placeholder=" 0" v-model="maxZapatos">
                            
                        </div>   
                        <div>
-                           <label class="form_label">Salario Base:</label>
-                           <input class="pin" type="text" placeholder="$0.0">
+                           <label class="form_label">Precio de Ensamble:</label>
+                           <input class="pin" type="text" placeholder="$0.0" v-model="preEnsaZapato">
                            
                        </div>   
                        <div>
-                           <label class="form_label">Salario Base:</label>
-                           <input class="pin" type="text" placeholder="$0.0">
+                           <label class="form_label">Maximo Zapatillas:</label>
+                           <input class="pin" type="text" placeholder=" 0" v-model="maxZapatillas">
                            
                        </div>   
+                       <div>
+                           <label class="form_label">Precio de Ensamble:</label>
+                           <input class="pin" type="text" placeholder="$0.0" v-model="preEnsaZapatillas">
+                           
+                       </div>  
                         
                   </div>
    
@@ -45,29 +50,19 @@
                <div class="formi">
                     <div class="form_container">
                         <div class="form_tittle">
-                            <h2>Liquidación</h2>
+                            <h4>Liquidación Vendedor</h4>
                         </div>
                         
                         <div>
                             <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
+                            <input class="pin" type="text" placeholder="$0.0" v-model="VBase">
                             
                         </div>    
                         <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
+                            <label class="form_label">Comisión por Venta:</label>
+                            <input class="pin" type="text" placeholder="0%" v-model="comisionVenta">
                             
-                        </div>   
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>   
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>   
+                        </div>    
                         
                     </div>
     
@@ -76,39 +71,26 @@
                 <div class="formi">
                     <div class="form_container">
                         <div class="form_tittle">
-                            <h2>Liquidación</h2>
+                            <h4>Liquidación Secretario</h4>
                         </div>
                         
                         <div>
                             <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>    
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>   
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>   
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
+                            <input class="pin" type="text" placeholder="$0.0" v-model="SBase">
                             
                         </div>   
                         
                     </div>
     
                 </div>
-                
-             
+                <div>
+                   <Button @click="guardarCambios">Guardar Cambios</Button>
+                </div>
+            </div>
          
 
     </div>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
-    <script src="../main.js"></script>
+    <script src="../js/admin.js"></script>
 </html>
