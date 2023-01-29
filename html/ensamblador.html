@@ -10,35 +10,71 @@
 <body>
     <div id="app" class="container ">
         
-        
-                 
-
                 <div class="form"> 
+                    <div class="form_tittle">
+                        <h4>Liquidación Ensamblador</h4>
+                    </div>  
+                    <div>
         
-                    <div class="form_container">
-                        <div class="form_tittle">
-                            <h2>Liquidación</h2>
-                        </div>   
-                        <br>
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
+                    <div class="eForm ">
+                            <div>
+                                <label class="form_label">Salario Base:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="EBase" disabled>
+                                
+                            </div> 
+                            <div>
+                                <label class="form_label">Horas Extras:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="hExtras">
+                                
+                            </div> 
+                         
+                            <div>
+                                <label class="form_label">Cantidad de Zapatos:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="nZapatos">
+                                
+                            </div> 
+                            <div>
+                                <label class="form_label">Incremento:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="pagoZapatos" disabled>
+                                
+                            </div> 
+
+                         
+                            <div>
+                                <label class="form_label">Cantidad de Zapatillas:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="nZapatillas">
+                                
+                            </div> 
+                            <div>
+                                <label class="form_label">Incremento:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="pagoZapatillas" disabled>
+                                
+                            </div> 
+
+                         
+                            <div>
+                                <label class="form_label">Transporte:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="auxTra" disabled>
+                                
+                            </div> 
+                            <div>
+                                <label class="form_label">Número de Hijos:</label>
+                                <input class="pin" type="text" placeholder="0" v-model="nHijos">
+                                
+                            </div> 
+
                             
-                        </div> 
-                        <div>
-                            <label class="form_label">Horas Extras:</label>
-                            <input class="pin" type="text" placeholder="0">
-                            
-                        </div> 
-                        <div>
-                            <label class="form_label">Total a Pagar:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
-                            
-                        </div>    
+                            <div>
+                                <label class="form_label">Total a Pagar:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="totalPago" disabled>
+                                
+                            </div>    
                         
-                        <div>
-                            <a   href="#">Ingresar</a>
-                        </div>
+                    </div>
+
+                    <div>
+                        <button @click="calcular"> Calcular </button>
+                    </div>
    
                    </div>
    
@@ -51,5 +87,5 @@
     </div>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
-    <script src="../main.js"></script>
+    <script src="../js/ensamblador.js"></script>
 </html>

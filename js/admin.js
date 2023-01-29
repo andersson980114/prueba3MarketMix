@@ -1,14 +1,14 @@
 const app = new Vue({
     el: '#app',
     data:{
-        EBase: 0,
-        VBase: 0,
-        SBase: 0,
-        maxZapatos: 0,
-        preEnsaZapato: 0,
-        maxZapatillas: 0,
-        preEnsaZapatillas: 0,
-        comisionVenta: 0
+        EBase: undefined,
+        VBase: undefined,
+        SBase: undefined,
+        maxZapatos: undefined,
+        preEnsaZapato: undefined,
+        maxZapatillas: undefined,
+        preEnsaZapatillas: undefined,
+        comisionVenta: undefined
  
     }, 
     methods:{ 
@@ -40,11 +40,11 @@ const app = new Vue({
         let Secretario = JSON.parse(localStorage.getItem('Secretario'));
 
         if(Ensamblador === null){
-            this.EBase= 13000000,
-            this.maxZapatos= 300,
-            this.preEnsaZapato= 25000,
-            this.maxZapatillas= 300,
-            this.preEnsaZapatillas= 25000
+            this.EBase= 1300000,
+            this.maxZapatos= 3000,
+            this.preEnsaZapato= 1500,
+            this.maxZapatillas= 4000,
+            this.preEnsaZapatillas= 2500
              
         }else{
             this.EBase= Ensamblador.EBase,
@@ -67,9 +67,6 @@ const app = new Vue({
         }else{
             this.SBase= Secretario.SBase
         }
-
-        
-
          
     },
 })
