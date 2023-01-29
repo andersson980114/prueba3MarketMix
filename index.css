@@ -21,7 +21,7 @@ body{
     transform: translate(-50%, -50%);
     background-color: #ECECEC; 
     width: 90%;
-    max-width: 400px; 
+    max-width: 500px; 
     padding: 4.5em 3em;
     border-radius: 25px; 
     box-shadow: 6px 6px 4px -3px rgb(0 0 0 /80%);
@@ -50,6 +50,7 @@ img{
     gap: 1.5em;
 }
 
+ 
 .pin, select{
     width: 100%;
     background-color: #FFFFFF;
@@ -92,4 +93,9 @@ a{
 
 }
  
-
+ 
+.eForm{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+}
