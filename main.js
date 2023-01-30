@@ -41,7 +41,7 @@ const app = new Vue({
             },
             {
                 tipo: 'Ensamblador',
-                pin: 0123
+                pin: 1235
             },
             
         ],  
