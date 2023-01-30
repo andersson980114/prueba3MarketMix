@@ -31,6 +31,8 @@ const app = new Vue({
             localStorage.setItem('Secretario', JSON.stringify({
                 SBase: this.SBase,
             }))
+
+            alert("Cambios Guardados")
          }
     },
 

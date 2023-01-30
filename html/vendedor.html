@@ -9,55 +9,54 @@
 </head>
 <body>
     <div id="app" class="container ">
-        
-        
-                 
+         
+       <div class="cont">
+            <a href="../index.html" class="backB">Volver</a> 
+            <div class="form"> 
+    
+                <div class="form_container">
+                    <div class="form_tittle">
+                        <h2>Liquidación vendedor</h2>
+                    </div>    
+                    <div>
+                        <label class="form_label">Salario Base:</label>
+                        <input class="block" type="text" placeholder="$0.0" v-model="VBase" disabled>
+                        
+                    </div> 
+                    <div>
+                        <label class="form_label">Ventas:</label>
+                        <input class="pin" type="text" placeholder="0" v-model="ventas">
+                        
+                    </div> 
+                    <div>
+                        <label class="form_label">Comision:</label>
+                        <input class="block" type="text" placeholder="$0.0" v-model="comisionVenta" disabled>
+                        
+                    </div>    
+                    <div>
+                        <label class="form_label">Transporte:</label>
+                        <input class="block" type="text" placeholder="$0.0" v-model="transporte" disabled>
+                        
+                    </div> 
+                    <div>
+                        <label class="form_label">Total a pagar:</label>
+                        <input class="block" type="text" placeholder="$0.0" v-model="totalApagar" disabled>
+                        
+                    </div> 
+                    <div>
+                        <button @click="totalPagar">Calcular</button>
+                    </div>
+    
+                </div>
+    
+            </div>
 
-                <div class="form"> 
-        
-                    <div class="form_container">
-                        <div class="form_tittle">
-                            <h2>Liquidación vendedor</h2>
-                        </div>   
-                        <br>
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0" v-model="VBase" disabled>
-                            
-                        </div> 
-                        <div>
-                            <label class="form_label">Ventas:</label>
-                            <input class="pin" type="text" placeholder="0" v-model="ventas">
-                            
-                        </div> 
-                        <div>
-                            <label class="form_label">Comision:</label>
-                            <input class="pin" type="text" placeholder="$0.0" v-model="comisionVenta" disabled>
-                            
-                        </div>    
-                        <div>
-                            <label class="form_label">Transporte:</label>
-                            <input class="pin" type="text" placeholder="$0.0" v-model="transporte" disabled>
-                            
-                        </div> 
-                        <div>
-                            <label class="form_label">Total a pagar:</label>
-                            <input class="pin" type="text" placeholder="$0.0" v-model="totalApagar" disabled>
-                            
-                        </div> 
-                        <div>
-                            <button @click="totalPagar">Calcular</button>
-                        </div>
-   
-                   </div>
-   
-               </div>
+       </div>
 
-            </div> 
+    </div> 
              
          
-
-    </div>
+ 
 </body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
     <script src="../js/vendedor.js"></script>

@@ -13,7 +13,7 @@ const app = new Vue({
         pagoZapatos: 0,
         nZapatillas: undefined, 
         pagoZapatillas: 0,
-        auxTra: 117172,
+        auxTra: 140606,
         nHijos: undefined,
         pagoHijos:0,
         totalPago:undefined
