@@ -7,7 +7,7 @@ const app = new Vue({
         maxZapatos: undefined,
         preEnsaZapato: undefined,
         maxZapatillas: undefined,
-        preEnsaZapatillas: undefined, 
+        preEnsaZapatillas: undefined
  
     }, 
     methods:{ 
@@ -23,8 +23,7 @@ const app = new Vue({
             }))
             //Vendedor
             localStorage.setItem('Vendedor', JSON.stringify({
-                VBase: this.VBase,
-                comisionVenta: this.comisionVenta
+                VBase: this.VBase, 
             }))
             //Secretario
             localStorage.setItem('Secretario', JSON.stringify({
@@ -65,14 +64,14 @@ const app = new Vue({
         }
 
         if(Vendedor === null){
-            this.VBase= (1800000).toLocaleString("col"),
-            this.comisionVenta= 0.15
+            this.VBase= (1800000).toLocaleString("col")
 
             localStorage.setItem('Vendedor', JSON.stringify({
                 VBase: this.VBase, 
             }))
+
         }else{
-            this.VBase= (Vendedor.VBase).toLocaleString("col"), 
+            this.VBase= (Vendedor.VBase).toLocaleString("col") 
         }
 
         if(Secretario === null){
