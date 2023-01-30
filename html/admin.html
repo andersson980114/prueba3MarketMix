@@ -10,84 +10,81 @@
 <body>
     <div id="app" class="container ">
           
-           <div class="admin_container">
-               <div class="formi">
-                   <div class="form_container">
-                       <div class="form_tittle">
-                           <h4>Liquidación Ensamblador</h4>
-                       </div>
-                        
-                       <div>
-                           <label class="form_label">Salario Base:</label>
-                           <input class="pin" type="text" placeholder="$0.0" v-model="EBase">
-                           
-                       </div>    
-                       <div>
-                           <label class="form_label">Max. Zapatos:</label>
-                           <input class="pin" type="text" placeholder=" 0" v-model="maxZapatos">
-                           
-                       </div>   
-                       <div>
-                           <label class="form_label">Precio de Ensamble:</label>
-                           <input class="pin" type="text" placeholder="$0.0" v-model="preEnsaZapato">
-                           
-                       </div>   
-                       <div>
-                           <label class="form_label">Maximo Zapatillas:</label>
-                           <input class="pin" type="text" placeholder=" 0" v-model="maxZapatillas">
-                           
-                       </div>   
-                       <div>
-                           <label class="form_label">Precio de Ensamble:</label>
-                           <input class="pin" type="text" placeholder="$0.0" v-model="preEnsaZapatillas">
-                           
-                       </div>  
-                        
-                  </div>
-   
-               </div>
-
-               <div class="formi">
-                    <div class="form_container">
-                        <div class="form_tittle">
-                            <h4>Liquidación Vendedor</h4>
-                        </div>
-                        
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0" v-model="VBase">
+           <div class="cont">
+            <a href="../index.html" class="back"> Volver</a>
+                <div class="admin_container">
+                    <div class="formi">
+                        <div class="form_container">
+                            <div class="form_tittle">
+                                <h4>Liquidación Ensamblador</h4>
+                            </div>
                             
-                        </div>    
-                        <div>
-                            <label class="form_label">Comisión por Venta:</label>
-                            <input class="pin" type="text" placeholder="0%" v-model="comisionVenta">
-                            
-                        </div>    
-                        
+                            <div>
+                                <label class="form_label">Salario Base:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="EBase">
+                                
+                            </div>    
+                            <div>
+                                <label class="form_label">Max. Zapatos:</label>
+                                <input class="pin" type="text" placeholder=" 0" v-model="maxZapatos">
+                                
+                            </div>   
+                            <div>
+                                <label class="form_label">Precio de Ensamble:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="preEnsaZapato">
+                                
+                            </div>   
+                            <div>
+                                <label class="form_label">Maximo Zapatillas:</label>
+                                <input class="pin" type="text" placeholder=" 0" v-model="maxZapatillas">
+                                
+                            </div>   
+                            <div>
+                                <label class="form_label">Precio de Ensamble:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="preEnsaZapatillas">
+                                
+                            </div>   
+                    </div>
+        
                     </div>
     
-                </div>
-
-                <div class="formi">
-                    <div class="form_container">
-                        <div class="form_tittle">
-                            <h4>Liquidación Secretario</h4>
-                        </div>
-                        
-                        <div>
-                            <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0" v-model="SBase">
+                    <div class="formi">
+                        <div class="form_container">
+                            <div class="form_tittle">
+                                <h4>Liquidación Vendedor</h4>
+                            </div>
                             
-                        </div>   
-                        
+                            <div>
+                                <label class="form_label">Salario Base:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="VBase">
+                                
+                            </div>   
+    
+                              
+                        </div>
+        
                     </div>
     
+                    <div class="formi">
+                        <div class="form_container">
+                            <div class="form_tittle">
+                                <h4>Liquidación Secretario</h4>
+                            </div>
+                            
+                            <div>
+                                <label class="form_label">Salario Base:</label>
+                                <input class="pin" type="text" placeholder="$0.0" v-model="SBase">
+                                
+                            </div>   
+                        </div>
+        
+                    </div>
                 </div>
-                <div>
-                   <Button @click="guardarCambios">Guardar Cambios</Button>
+                <div class="b-space">
+                    <Button @click="guardarCambios">Guardar Cambios</Button>
                 </div>
-            </div>
-         
+           </div>
+            
 
     </div>
 </body>
