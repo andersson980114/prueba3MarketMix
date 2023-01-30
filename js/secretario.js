@@ -5,19 +5,19 @@ const app = new Vue({
         ValorExtras: 0,
         CantidadExtras: undefined,
         totalHorasExtra:0,
-        totalApagar: 0,
+        totalApagar: undefined,
 
     },
 
     methods: {
         totalPagar(){
-            if(this.totalPagar ===0 ){
+            if(this.totalAPagar ===0  || this.totalAPagar ===undefined){
                 this.SBase = Number((this.SBase).replace(/,/g, ""))
             }else{
                 let Secretario = JSON.parse(localStorage.getItem('Secretario'));
 
-                if (Secretario === null) {
-                    this.SBase = 15000000
+                if (this.Secretario === null) {
+                    this.SBase = (1500000).toLocaleString("col")
                 } else {
                     this.SBase = (Secretario.SBase).toLocaleString("col");
                 }
@@ -37,7 +37,7 @@ const app = new Vue({
         let Secretario = JSON.parse(localStorage.getItem('Secretario'));
 
         if (Secretario === null) {
-            this.SBase = 15000000
+            this.SBase = (1500000).toLocaleString("col")
         } else {
             this.SBase = (Secretario.SBase).toLocaleString("col");
         }

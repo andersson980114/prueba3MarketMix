@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        VBase: 0,
+        VBase: undefined,
         ventas: undefined,
         comisionVenta: 0,
         transporte: 140606, 
@@ -13,13 +13,13 @@ const app = new Vue({
     methods: {
         totalPagar(){
 
-            if(this.totalApagar === 0){
+            if(this.totalApagar === undefined){
                 this.VBase = Number((this.VBase).replace(/,/g, ""))
             }else{
                 let Vendedor = JSON.parse(localStorage.getItem('Vendedor'));
 
                 if(Vendedor === null){
-                    this.VBase= 1800000,
+                    this.VBase= (1800000).toLocaleString("col")
                     this.comisionVenta= 0
                 }else{
                     this.VBase= (Vendedor.VBase).toLocaleString("col");
@@ -55,11 +55,9 @@ const app = new Vue({
         let Vendedor = JSON.parse(localStorage.getItem('Vendedor'));
 
         if(Vendedor === null){
-            this.VBase= 1800000,
-            this.comisionVenta= 0
+            this.VBase= (1800000).toLocaleString("col")
         }else{
-            this.VBase= (Vendedor.VBase).toLocaleString("col");
-            this.comisionVenta= Vendedor.comisionVenta;
+            this.VBase= (Vendedor.VBase).toLocaleString("col"); 
         }
                  
     },
