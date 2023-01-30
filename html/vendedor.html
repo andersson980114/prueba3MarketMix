@@ -17,27 +17,36 @@
         
                     <div class="form_container">
                         <div class="form_tittle">
-                            <h2>Liquidación</h2>
+                            <h2>Liquidación vendedor</h2>
                         </div>   
                         <br>
                         <div>
                             <label class="form_label">Salario Base:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
+                            <input class="pin" type="text" placeholder="$0.0" v-model="VBase" disabled>
                             
                         </div> 
                         <div>
-                            <label class="form_label">Horas Extras:</label>
-                            <input class="pin" type="text" placeholder="0">
+                            <label class="form_label">Ventas:</label>
+                            <input class="pin" type="text" placeholder="0" v-model="ventas">
                             
                         </div> 
                         <div>
-                            <label class="form_label">Total a Pagar:</label>
-                            <input class="pin" type="text" placeholder="$0.0">
+                            <label class="form_label">Comision:</label>
+                            <input class="pin" type="text" placeholder="$0.0" v-model="comisionVenta" disabled>
                             
                         </div>    
-                        
                         <div>
-                            <a   href="#">Ingresar</a>
+                            <label class="form_label">Transporte:</label>
+                            <input class="pin" type="text" placeholder="$0.0" v-model="transporte" disabled>
+                            
+                        </div> 
+                        <div>
+                            <label class="form_label">Total a pagar:</label>
+                            <input class="pin" type="text" placeholder="$0.0" v-model="totalApagar" disabled>
+                            
+                        </div> 
+                        <div>
+                            <button @click="totalPagar">Calcular</button>
                         </div>
    
                    </div>
@@ -51,5 +60,5 @@
     </div>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
-    <script src="../main.js"></script>
+    <script src="../js/vendedor.js"></script>
 </html>
