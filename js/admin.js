@@ -40,11 +40,11 @@ const app = new Vue({
         let Secretario = JSON.parse(localStorage.getItem('Secretario'));
 
         if(Ensamblador === null){
-            this.EBase= (1300000).toLocaleString("col"),
-            this.maxZapatos= 3000,
-            this.preEnsaZapato= (1500).toLocaleString("col"),
-            this.maxZapatillas= 4000,
-            this.preEnsaZapatillas= (2500).toLocaleString("col")
+            this.EBase= 300000
+            this.maxZapatos= 3000
+            this.preEnsaZapato= 1500
+            this.maxZapatillas= 4000
+            this.preEnsaZapatillas= 2500
 
             localStorage.setItem('Ensamblador', JSON.stringify({
                 EBase: this.EBase,
@@ -56,31 +56,31 @@ const app = new Vue({
             }))
              
         }else{
-            this.EBase= (Ensamblador.EBase).toLocaleString("col"),
+            this.EBase= Ensamblador.EBase
             this.maxZapatos= Ensamblador.maxZapatos,
-            this.preEnsaZapato= (Ensamblador.preEnsaZapato).toLocaleString("col"),
+            this.preEnsaZapato= Ensamblador.preEnsaZapato
             this.maxZapatillas= Ensamblador.maxZapatillas,
-            this.preEnsaZapatillas= (Ensamblador.preEnsaZapatillas).toLocaleString("col")
+            this.preEnsaZapatillas= Ensamblador.preEnsaZapatillas
         }
 
         if(Vendedor === null){
-            this.VBase= (1800000).toLocaleString("col")
+            this.VBase= 1800000
 
             localStorage.setItem('Vendedor', JSON.stringify({
                 VBase: this.VBase, 
             }))
 
         }else{
-            this.VBase= (Vendedor.VBase).toLocaleString("col") 
+            this.VBase= Vendedor.VBase
         }
 
         if(Secretario === null){
-            this.SBase= (1500000).toLocaleString("col")
+            this.SBase= 1500000
             localStorage.setItem('Secretario', JSON.stringify({
                 SBase: this.SBase,
             }))
         }else{
-            this.SBase= (Secretario.SBase).toLocaleString("col")
+            this.SBase= Secretario.SBase 
         } 
     },
 })

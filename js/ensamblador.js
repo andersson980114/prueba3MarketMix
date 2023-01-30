@@ -23,35 +23,27 @@ const app = new Vue({
     }, 
     methods:{ 
           calcular(){
-            //formatear a numero
             
-            if(this.totalPago === undefined){
-                this.EBase = Number((this.EBase).replace(/,/g, ""))
-                this.preEnsaZapato = Number((this.preEnsaZapato).replace(/,/g, ""))
-                this.preEnsaZapatillas = Number((this.preEnsaZapatillas).replace(/,/g, ""))
-                
-            }else{
+            
                 let Ensamblador = JSON.parse(localStorage.getItem('Ensamblador')); 
 
                 if(Ensamblador === null){
-                    this.EBase=  (1300000).toLocaleString("col"),
+                    this.EBase=  1300000
                     this.maxZapatos=  3000 ,
-                    this.preEnsaZapato=  (2500).toLocaleString("col"),
+                    this.preEnsaZapato=  2500
                     this.maxZapatillas= 4000,
-                    this.preEnsaZapatillas= (1500).toLocaleString("col")
+                    this.preEnsaZapatillas= 1500
                     
                 }else{
-                    this.EBase= (Ensamblador.EBase).toLocaleString("col") ,
+                    this.EBase= Ensamblador.EBase
                     this.maxZapatos= Ensamblador.maxZapatos,
-                    this.preEnsaZapato= ( Ensamblador.preEnsaZapato).toLocaleString("col"),
+                    this.preEnsaZapato=  Ensamblador.preEnsaZapato
                     this.maxZapatillas= Ensamblador.maxZapatillas,
-                    this.preEnsaZapatillas= (Ensamblador.preEnsaZapatillas).toLocaleString("col")
+                    this.preEnsaZapatillas= Ensamblador.preEnsaZapatillas
                 }
 
-                this.EBase = Number((this.EBase).replace(/,/g, ""))
-                this.preEnsaZapato = Number((this.preEnsaZapato).replace(/,/g, ""))
-                this.preEnsaZapatillas = Number((this.preEnsaZapatillas).replace(/,/g, ""))
-            }
+               
+           
  
 
             //horas extras
@@ -84,9 +76,9 @@ const app = new Vue({
             }
 
 
-            this.totalPago= (this.EBase + this.pHExtras + this.pagoZapatos + this.pagoZapatillas + this.pagoHijos +  this.auxTra).toLocaleString("col")
-            this.pagoZapatos=(this.pagoZapatos).toLocaleString("col")
-            this.pagoZapatillas=(this.pagoZapatillas).toLocaleString("col")
+            this.totalPago= this.EBase + this.pHExtras + this.pagoZapatos + this.pagoZapatillas + this.pagoHijos +  this.auxTra
+            this.pagoZapatos=this.pagoZapatos
+            this.pagoZapatillas=this.pagoZapatillas
           }
     },
 
@@ -96,18 +88,18 @@ const app = new Vue({
         
 
         if(Ensamblador === null){
-            this.EBase=  (1300000).toLocaleString("col"),
+            this.EBase=  1300000
             this.maxZapatos=  3000 ,
-            this.preEnsaZapato=  (2500).toLocaleString("col"),
+            this.preEnsaZapato=  2500
             this.maxZapatillas= 4000,
-            this.preEnsaZapatillas= (1500).toLocaleString("col")
+            this.preEnsaZapatillas= 1500
              
         }else{
-            this.EBase= (Ensamblador.EBase).toLocaleString("col") ,
+            this.EBase= Ensamblador.EBase,
             this.maxZapatos= Ensamblador.maxZapatos,
-            this.preEnsaZapato= ( Ensamblador.preEnsaZapato).toLocaleString("col"),
+            this.preEnsaZapato= Ensamblador.preEnsaZapato
             this.maxZapatillas= Ensamblador.maxZapatillas,
-            this.preEnsaZapatillas= (Ensamblador.preEnsaZapatillas).toLocaleString("col")
+            this.preEnsaZapatillas= Ensamblador.preEnsaZapatillas
         }
 
          

@@ -13,21 +13,18 @@ const app = new Vue({
     methods: {
         totalPagar(){
 
-            if(this.totalApagar === undefined){
-                this.VBase = Number((this.VBase).replace(/,/g, ""))
-            }else{
                 let Vendedor = JSON.parse(localStorage.getItem('Vendedor'));
 
                 if(Vendedor === null){
-                    this.VBase= (1800000).toLocaleString("col")
+                    this.VBase= (1800000)
                     this.comisionVenta= 0
                 }else{
-                    this.VBase= (Vendedor.VBase).toLocaleString("col");
+                    this.VBase= (Vendedor.VBase)
                     this.comisionVenta= Vendedor.comisionVenta;
                 }
 
-                this.VBase = Number((this.VBase).replace(/,/g, ""))
-            }
+                
+            
 
             if(this.ventas > 5000000 && this.ventas <= 10000000){
                 
@@ -43,8 +40,7 @@ const app = new Vue({
                 this.totalApagar= this.comisionVenta + this.VBase + this.transporte;
             }
 
-            this.totalApagar = (this.totalApagar).toLocaleString("col")
-            this.VBase = (this.VBase ).toLocaleString("col") 
+            
 
         }
 
@@ -55,9 +51,9 @@ const app = new Vue({
         let Vendedor = JSON.parse(localStorage.getItem('Vendedor'));
 
         if(Vendedor === null){
-            this.VBase= (1800000).toLocaleString("col")
+            this.VBase= 1800000
         }else{
-            this.VBase= (Vendedor.VBase).toLocaleString("col"); 
+            this.VBase= Vendedor.VBase
         }
                  
     },
